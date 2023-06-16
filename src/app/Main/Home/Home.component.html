@@ -7,15 +7,15 @@
       <span> <a href="#" style="text-decoration: none"> register </a>  </span>
     </p>
     <div class="text-center">
-      <button class="btn btn-primary btn-large mr-4">Register</button>
-      <button class="btn btn-info btn-large">Learn More</button>
+      <button class="btn btn-primary btn-large" (click)="registerToggle()">Register</button>
+      <button class="btn btn-info btn-large ml-2">Learn More</button>
     </div>
   </div>
 
   <div *ngIf="registerMode" class="container">
     <div class="row justify-content-center">
       <div class="col-4">
-        <p>Register Form here!</p>
+        <app-Register (cancelRegister)="cancelRegisterMode($event)" ></app-Register>
       </div>
     </div>
   </div>
